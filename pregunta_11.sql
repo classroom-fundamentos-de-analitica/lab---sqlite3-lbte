@@ -38,7 +38,7 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
-SELECT STRFTIME('%Y', c14) AS YEAR, COUNT(*) AS CANT
+SELECT STRFTIME('%Y', c14) AS YEAR, COUNT(*)
 FROM tbl1
 WHERE YEAR = "2018"
 GROUP BY YEAR;
