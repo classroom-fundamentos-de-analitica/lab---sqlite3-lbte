@@ -38,3 +38,7 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT tbl2.K1, c21, c22, c23, c24, c25
+FROM tbl2
+INNER JOIN (SELECT K1, MIN(c21) AS menor FROM tbl2) AS tbl22 ON tbl2.K1 = tbl22.K1
+WHERE c21 = menor;
