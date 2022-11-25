@@ -40,3 +40,8 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
+SELECT K0, c16
+FROM tbl1
+JOIN (SELECT K1, SUBSTR(c16, 1, 1) AS c16First
+            FROM tbl1) AS tbl11 ON tbl1.K1 = tbl11.K1
+WHERE K0 = c16First;
